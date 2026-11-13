@@ -1,0 +1,49 @@
+/* ===== LAYOUT WRAPPERS ===== */
+.layout__header{
+	margin:auto;
+}
+
+.layout__nav,
+.layout__main,
+.layout__footer {
+  width: min(90%, 1150px);
+  margin-inline: auto;
+}
+
+.layout__header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem;
+}
+
+/* Hamburger toggle (hidden on ≥600 px) */
+.nav__toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: none; font-size: 1.5rem; color: var(--white);
+  cursor: pointer; padding: .25rem; margin-right: .5rem;
+}
+@media (min-width: 600px) { .nav__toggle { display: none; } }
+
+/* Nav list */
+.nav__list {
+  list-style: none; gap: .75rem; display: flex; flex-direction: column;
+  padding-left: 0; margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .nav__list { flex-direction: row; margin-top: 0; }
+}
+
+/* Main content */
+.layout__main { padding: 2rem 0 4rem; }
+
+/* Footer */
+.layout__footer {
+  text-align: center; padding: 2rem 0; font-size: .85rem;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+/* Glassy card wrapper for sections */
+section {
+  background: rgba(255,255,255,.08); border-radius: 1rem; padding: 2rem;
+  backdrop-filter: blur(8px); margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+}
